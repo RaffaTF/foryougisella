@@ -1,0 +1,527 @@
+/* ================= BASE ================= */
+body {
+    margin:0;
+    font-family: 'Comic Sans MS', 'Poppins', sans-serif;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(135deg,#ffd6e0,#ffe9cc,#e6f7ff);
+}
+
+/* CONFETTI */
+#confetti {
+    position:fixed;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    z-index:999;
+}
+
+/* BOOK */
+.book {
+    width:92%;
+    max-width:380px;
+}
+
+/* ================= PAGE ================= */
+.page {
+    background:#fff;
+    padding:22px 18px;
+    border-radius:20px;
+    text-align:center;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    border:2px dashed #ffd1dc;
+
+    display:none;
+    animation: popIn 0.4s ease;
+}
+
+.page.active {
+    display:block;
+}
+
+.hidden {
+    display:none !important;
+}
+
+@keyframes popIn {
+    from {transform:scale(0.9); opacity:0;}
+    to {transform:scale(1); opacity:1;}
+}
+
+/* TEXT */
+h1,h2 {
+    color:#ff6f91;
+}
+
+p {
+    color:#555;
+    font-size:14px;
+    line-height:1.6;
+}
+
+/* ================= PAGE 1 (FIXED) ================= */
+.birthday-cover {
+    position: relative;
+
+    min-height: 360px;
+    padding: 30px 20px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+/* CONTENT CENTER */
+.cover-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 260px;
+    margin: auto;
+
+    animation: introFade 1.2s ease;
+}
+
+@keyframes introFade {
+    0% {
+        opacity:0;
+        transform:translateY(25px) scale(0.95);
+    }
+    100% {
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+/* TITLE */
+.birthday-title {
+    font-size:20px;
+    line-height:1.4;
+
+    text-shadow:
+        0 0 8px rgba(255,111,145,0.4),
+        0 0 16px rgba(255,111,145,0.2);
+
+    animation: glowPulse 3s ease-in-out infinite;
+}
+
+/* SUBTITLE */
+.subtitle {
+    margin-top:10px;
+    font-size:14px;
+
+    text-shadow:0 0 6px rgba(255,182,193,0.4);
+    animation: glowPulse 3s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+    0%,100% {
+        text-shadow:
+            0 0 6px rgba(255,111,145,0.3),
+            0 0 12px rgba(255,111,145,0.15);
+    }
+    50% {
+        text-shadow:
+            0 0 14px rgba(255,111,145,0.6),
+            0 0 22px rgba(255,111,145,0.3);
+    }
+}
+
+/* TAP TEXT */
+.tap-hint {
+    margin-top:20px;
+    font-size:12px;
+    color:#999;
+
+    animation: tapFloat 2s ease-in-out infinite;
+}
+
+@keyframes tapFloat {
+    0%,100% {transform:translateY(0); opacity:1;}
+    50% {transform:translateY(-6px); opacity:0.6;}
+}
+
+/* DECOR */
+.decor {
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    pointer-events:none;
+}
+
+.decor span {
+    position:absolute;
+    font-size:18px;
+    opacity:0.6;
+    animation: floatDecor 6s ease-in-out infinite;
+}
+
+.decor span:nth-child(1){ top:10%; left:15%; }
+.decor span:nth-child(2){ top:20%; right:15%; animation-delay:1s; }
+.decor span:nth-child(3){ bottom:15%; left:20%; animation-delay:2s; }
+.decor span:nth-child(4){ bottom:10%; right:20%; animation-delay:3s; }
+
+@keyframes floatDecor {
+    0% {transform:translateY(0); opacity:0.5;}
+    50% {transform:translateY(-10px); opacity:0.9;}
+    100% {transform:translateY(0); opacity:0.5;}
+}
+
+/* ================= CANDLE ================= */
+.candle {
+    font-size:60px;
+    margin-top:30px;
+    cursor:pointer;
+    position:relative;
+}
+
+.flame {
+    position:absolute;
+    top:-12px;
+    left:50%;
+    transform:translateX(-50%);
+    width:10px;
+    height:10px;
+    background:orange;
+    border-radius:50%;
+    animation:flicker 0.5s infinite;
+}
+
+.smoke {
+    position:absolute;
+    top:-28px;
+    left:50%;
+    transform:translateX(-50%);
+    width:6px;
+    height:16px;
+    background:rgba(150,150,150,0.4);
+    opacity:0;
+}
+
+.candle.blown .flame { display:none; }
+
+.candle.blown .smoke {
+    opacity:1;
+    animation:smokeUp 1s ease;
+}
+
+@keyframes flicker {
+    50% {opacity:0.4;}
+}
+
+@keyframes smokeUp {
+    to {transform:translate(-50%,-40px); opacity:0;}
+}
+
+/* ================= MEMORIES (ALBUM STYLE - 10 FOTO FIT) ================= */
+
+.photo-grid {
+    margin-top: 10px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 🔥 3 kolom biar muat banyak */
+    gap: 10px;
+
+    padding: 5px;
+}
+
+/* FRAME ALBUM */
+.photo-frame {
+    position: relative;
+
+    background: #fffaf5;
+    padding: 6px 6px 12px 6px; /* lebih kecil */
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 12px rgba(0,0,0,0.12);
+
+    transform: rotate(-2deg);
+    transition: 0.2s;
+}
+
+/* VARIASI */
+.photo-frame:nth-child(even) {
+    transform: rotate(2deg);
+}
+
+.photo-frame:nth-child(3n) {
+    transform: rotate(-3deg);
+}
+
+/* FOTO */
+.photo-frame img {
+    width: 100%;
+    height: 120px; /* 🔥 diperkecil supaya muat 10 foto */
+    object-fit: cover;
+
+    border-radius: 6px;
+}
+
+/* TAPE */
+.photo-frame::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-3deg);
+
+    width: 28px;
+    height: 10px;
+
+    background: rgba(255,255,255,0.6);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+/* HOVER */
+.photo-frame:hover {
+    transform: scale(1.05) rotate(0deg);
+    z-index: 5;
+}
+/* DATE DI FOTO */
+.photo-date {
+    position: absolute;
+    bottom: 4px;
+    left: 6px;
+
+    font-size: 9px;
+    color: #555;
+
+    background: rgba(255,255,255,0.7);
+    padding: 2px 6px;
+    border-radius: 6px;
+
+    font-family: 'Courier New', monospace; /* biar kayak timestamp kamera */
+}
+
+/* ================= FIX JUDUL ================= */
+
+#p4 {
+    position: relative;
+    padding-top: 10px;
+}
+
+#p4 h2 {
+    position: relative;
+    z-index: 5;
+
+    margin-bottom: 12px;
+
+    display: inline-block;
+    padding: 5px 10px;
+
+    font-size: 16px;
+
+    background: rgba(255,255,255,0.9);
+    border-radius: 8px;
+
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+/* ================= VIDEO ================= */
+.video-box {
+    display:flex;
+    justify-content:center;
+    margin-top:15px;
+}
+
+.video-box video {
+    width:100%;
+    max-width:220px;
+    aspect-ratio:9/16;
+    object-fit:cover;
+    border-radius:14px;
+    border:4px solid #ffd1dc;
+    box-shadow:0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* ================= BUTTON ================= */
+.next-btn {
+    margin-top:15px;
+    padding:10px 14px;
+    border:none;
+    border-radius:10px;
+    background:#6fcf97;
+    color:white;
+    cursor:pointer;
+}
+
+.replay-btn {
+    margin-top:20px;
+    width:100%;
+    padding:10px;
+    background:#ff6f91;
+    color:white;
+    border:none;
+    border-radius:12px;
+}
+
+/* ================= CONFIRM ================= */
+.confirm-buttons {
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin-top:15px;
+}
+
+.confirm-buttons button {
+    padding:8px 12px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.confirm-buttons button:first-child {
+    background:#6fcf97;
+    color:white;
+}
+
+.confirm-buttons button:last-child {
+    background:#ff6f91;
+    color:white;
+}
+
+/* ================= FINAL PAGE ================= */
+#p7 {
+    background:#fffaf5;
+    padding:20px;
+    border-radius:16px;
+    text-align:left;
+    max-height:85vh;
+    overflow-y:auto;
+}
+
+#typewriter-text {
+    font-size:14px;
+    line-height:1.6;
+    text-align:justify;
+}
+
+.signature {
+    margin-top:20px;
+    text-align:right;
+    font-size:12px;
+    color:#888;
+}
+/* ================= FIX KHUSUS PAGE 1 ================= */
+
+#p1 {
+    max-width: 300px; /* 🔥 card lebih kecil dari page lain */
+    margin: auto;
+}
+
+/* kecilkan tinggi card */
+#p1.birthday-cover {
+    min-height: 240px;
+    padding: 18px 14px;
+
+    justify-content: flex-start; /* biar konten turun */
+}
+
+/* turunkan posisi teks */
+#p1 .cover-content {
+    margin-top: 80px;
+    max-width: 220px;
+}
+
+/* kecilkan teks biar proporsional */
+#p1 .birthday-title {
+    font-size: 17px;
+}
+
+#p1 .subtitle {
+    font-size: 12.5px;
+}
+
+#p1 .tap-hint {
+    font-size: 11px;
+    margin-top: 12px;
+}
+/* ================= CONFIRM UPGRADE ================= */
+
+#p6a {
+    animation: fadeInSoft 0.8s ease;
+}
+
+/* TEXT */
+#confirm-text {
+    margin: 20px 0;
+    font-size: 16px;
+    color: #555;
+
+    opacity: 0;
+    transform: translateY(10px);
+
+    animation: textReveal 1s ease forwards;
+    animation-delay: 0.3s;
+
+    text-shadow: 0 0 8px rgba(255,111,145,0.2);
+}
+
+/* ANIMASI MASUK */
+@keyframes fadeInSoft {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes textReveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* BUTTON WRAPPER */
+.confirm-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+/* BUTTON STYLE */
+.confirm-buttons button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 14px;
+
+    transition: all 0.25s ease;
+}
+
+/* YES BUTTON */
+.confirm-buttons button:first-child {
+    background: #6fcf97;
+    color: white;
+    box-shadow: 0 4px 12px rgba(111,207,151,0.4);
+}
+
+/* NO BUTTON */
+.confirm-buttons button:last-child {
+    background: #ff6f91;
+    color: white;
+    box-shadow: 0 4px 12px rgba(255,111,145,0.4);
+}
+
+/* HOVER EFFECT */
+.confirm-buttons button:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+/* CLICK EFFECT */
+.confirm-buttons button:active {
+    transform: scale(0.95);
+}

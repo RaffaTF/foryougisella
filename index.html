@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gisella's Birthday 💖</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<canvas id="confetti"></canvas>
+
+<div class="book">
+
+
+<!-- PAGE 1 -->
+<div class="page active birthday-cover" id="p1" onclick="nextPage()">
+
+    <!-- dekor animasi -->
+    <div class="decor">
+        <span>💖</span>
+        <span>✨</span>
+        <span>💗</span>
+        <span>✨</span>
+    </div>
+
+    <!-- konten utama -->
+    <div class="cover-content">
+        <h1 class="birthday-title">Raffa Ada Sesuatu Niihh</h1>
+        <p class="subtitle">hari ini spesial banget buat kamu ✨</p>
+        <p class="tap-hint">tap untuk liatt 🎁</p>
+    </div>
+
+</div>
+
+<!-- PAGE 2 -->
+<div class="page hidden" id="p2" onclick="nextPage()">
+    <h2>🎂 happy birthday</h2>
+    <p>
+        happy birthday yaaa 🎂<br><br>
+        semoga diumur yang sekarang, hal hal baik pelan pelan datang ke gisel,
+        dan semua yang lagi gisel jalanin bisa jadi lebih ringan dari sebelumnya.<br><br>
+        semoga juga gisel selalu dikelilingi hal hal yang bikin tenang dan bahagia bahkan dari hal kecil sekalipun ✨
+    </p>
+</div>
+
+<!-- PAGE 2A -->
+<div class="page hidden" id="p2a">
+    <h2>🕯️ make a wish</h2>
+    <div class="candle-box">
+        <div class="candle" onclick="blowCandle(event)">
+            🕯️
+            <div class="flame"></div>
+            <div class="smoke"></div>
+        </div>
+        <p>kalau sudah tiup lilinya di tap yaaa ✨</p>
+    </div>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page hidden" id="p3" onclick="nextPage()">
+    <h2>💌 for you</h2>
+    <p>
+        makasih yaa udah nemenin raffa selama ini,
+        udah bikin hari hari raffa jadi lebih berwarna.<br><br>
+        makasih juga buat semua cerita yang udah gisel ceritain,
+        hal kecil tapi berarti banget buat raffa.
+    </p>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page hidden" id="p4" onclick="nextPage()">
+    <h2>📸 memories</h2>
+    <div class="photo-grid">
+        <div class="photo-frame"><img src="images/foto1.jpg"> 
+            <span class="photo-date">08 Oktober 2025</span>
+        </div>
+        
+        <div class="photo-frame"><img src="images/foto2.jpg">
+            <span class="photo-date">07 Desember 2025</span>
+        </div>
+       
+        <div class="photo-frame"><img src="images/foto3.jpg">
+        
+            <span class="photo-date">07 Desember 2025</span>
+        </div>
+        <div class="photo-frame"><img src="images/foto4.jpg">
+            <span class="photo-date">11 November 2025</span>        
+        </div>
+        
+        <div class="photo-frame"><img src="images/foto5.jpg">
+            <span class="photo-date">11 November 2025</span>        
+        </div>
+        
+        <div class="photo-frame"><img src="images/foto6.jpg">
+                <span class="photo-date">28 November 2025</span>
+
+        </div>
+        <div class="photo-frame"><img src="images/foto7.jpeg">
+                <span class="photo-date">05 November 2025</span>
+
+        </div>
+        <div class="photo-frame"><img src="images/foto8.jpeg">
+            <span class="photo-date">11 November 2025</span>        
+
+        </div>
+        <div class="photo-frame"><img src="images/foto9.jpeg">
+            <span class="photo-date">25 Oktober 2025</span>
+
+        </div>
+        <!-- <div class="photo-frame"><img src="images/foto10.jpeg"></div> -->
+
+    </div>
+    <p class="caption">small moments, big meaning 💖</p>
+</div>
+
+<!-- PAGE 5 -->
+<div class="page hidden" id="p5" onclick="nextPage()">
+    <h2>🌷 wish</h2>
+    <p>
+        semoga hari ini jadi salah satu hari yang baik buat gisel,dan gisel ngerasa happy terus di hari spesial gisel inii<br><br>
+        take care and be happy selalu yaaaa ✨
+    </p>
+</div>
+
+<!-- PAGE 6 -->
+<div class="page hidden" id="p6">
+    <h2></h2>
+    <p>
+        wish you all the besttt ✨<br><br>
+        raffa bakal selalu doain yang terbaik buat gisel,dari jauh atau dekat,semoga gisel selalu baik baik saja yaaa 💖
+    </p>
+
+    <div class="video-box">
+        <video controls>
+            <source src="video/ucapan.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <button class="next-btn" onclick="nextPage()">
+        lastt niihh
+    </button>
+</div>
+
+<!-- PAGE 6A (KONFIRMASI) -->
+<div class="page hidden" id="p6a">
+    <h2>💭 terakhiirrr...</h2>
+
+    <p id="confirm-text">
+        ada pesan terakhir dari raffa mau bacaa???
+    </p>
+
+    <div class="confirm-buttons">
+        <button onclick="confirmYes()">mauu 💖</button>
+        <button onclick="confirmNo()">nggaa 💔</button>
+    </div>
+</div>
+
+<!-- PAGE 7 -->
+<div class="page hidden" id="p7">
+    <h2>💭 last message</h2>
+
+    <p id="typewriter-text"></p>
+
+    <p class="signature">
+        — dari kakaa untuk dedeekkk
+    </p>
+
+    <button class="replay-btn" onclick="restartDiary(event)">
+        Terimakasiihhh 💌
+    </button>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
