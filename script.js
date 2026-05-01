@@ -4,7 +4,7 @@ let page = "p1";
 function stopAllVideos() {
   const videos = document.querySelectorAll("video");
 
-  videos.forEach(video => {
+  videos.forEach((video) => {
     video.pause();
     video.currentTime = 0;
   });
@@ -12,7 +12,6 @@ function stopAllVideos() {
 
 /* ================= NAVIGATION ================= */
 function show(id) {
-
   // stop semua video
   stopAllVideos();
 
@@ -31,25 +30,25 @@ function show(id) {
   if (id === "p7") {
     const el = document.getElementById("typewriter-text");
 
-    const sentences = finalMessage.split('\n');
+    const sentences = finalMessage.split("\n");
 
-    let formatted = '';
+    let formatted = "";
     let temp = [];
 
-    sentences.forEach(line => {
+    sentences.forEach((line) => {
       const clean = line.trim();
       if (!clean) return;
 
       temp.push(clean);
 
       if (temp.length >= 3) {
-        formatted += `<p>${temp.join(' ')}</p>`;
+        formatted += `<p>${temp.join(" ")}</p>`;
         temp = [];
       }
     });
 
     if (temp.length > 0) {
-      formatted += `<p>${temp.join(' ')}</p>`;
+      formatted += `<p>${temp.join(" ")}</p>`;
     }
 
     el.innerHTML = formatted;
@@ -158,7 +157,7 @@ function restartDiary(event) {
   stopAllVideos();
 
   // reset candle
-  document.querySelectorAll(".candle").forEach(c => {
+  document.querySelectorAll(".candle").forEach((c) => {
     c.classList.remove("blown");
   });
 
@@ -179,7 +178,7 @@ function restartDiary(event) {
   }
 
   // reset semua page
-  document.querySelectorAll(".page").forEach(p => {
+  document.querySelectorAll(".page").forEach((p) => {
     p.classList.remove("active");
     p.classList.add("hidden");
   });
