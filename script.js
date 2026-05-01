@@ -154,54 +154,74 @@ function blowCandle(event) {
   }, 900);
 }
 
-/* ================= RESTART (FULL RESET) ================= */
-function restartDiary(event) {
+/* ================= FADE MUSIC ================= */
+function fadeOutMusic(music, duration = 800) {
+  return new Promise((resolve) => {
+    if (!music) return resolve();
+
+    let startVolume = music.volume;
+    let startTime = performance.now();
+
+    function fade(now) {
+      let progress = (now - startTime) / duration;
+
+      if (progress < 1) {
+        music.volume = startVolume * (1 - progress);
+        requestAnimationFrame(fade);
+      } else {
+        music.volume = 0;
+        music.pause();
+        music.currentTime = 0;
+        music.volume = startVolume;
+        resolve();
+      }
+    }
+
+    requestAnimationFrame(fade);
+  });
+}
+
+/* ================= RESTART ================= */
+async function restartDiary(event) {
   event.stopPropagation();
 
-  // 🔥 STOP MUSIK TOTAL
   const music = document.getElementById("bgm");
   const btn = document.getElementById("music-btn");
   const icon = document.getElementById("music-icon");
 
-  if (music) {
-    music.pause();
-    music.currentTime = 0;
-  }
+  await fadeOutMusic(music, 800);
 
   if (btn) btn.classList.remove("playing");
   if (icon) icon.textContent = "▶";
 
-  // reset video
+  // reset posisi tombol
+  if (btn) {
+    btn.classList.remove("music-top-right");
+    btn.classList.add("music-bottom");
+  }
+
   stopAllVideos();
 
-  // reset candle
   document.querySelectorAll(".candle").forEach((c) => {
     c.classList.remove("blown");
   });
 
-  // reset confetti
-  if (ctx) {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-  }
+  if (ctx) ctx.clearRect(0, 0, canvas.width, canvas.height);
   confetti = [];
 
-  // reset text page 7
   const text = document.getElementById("typewriter-text");
   if (text) text.innerHTML = "";
 
-  // reset confirm text
   const confirmText = document.getElementById("confirm-text");
   if (confirmText) {
     confirmText.innerHTML = "ada pesan terakhir dari raffa mau bacaa???";
   }
 
-  // reset semua page
   document.querySelectorAll(".page").forEach((p) => {
     p.classList.remove("active");
     p.classList.add("hidden");
   });
 
-  // balik ke awal
   page = "p1";
   document.getElementById("p1").classList.remove("hidden");
   document.getElementById("p1").classList.add("active");
@@ -232,6 +252,16 @@ window.onload = () => {
 
   resizeCanvas();
   window.addEventListener("resize", resizeCanvas);
+
+  // 🔥 posisi awal tombol musik (FIX BAWAH TENGAH)
+  const btn = document.getElementById("music-btn");
+  if (btn) {
+    btn.style.top = "auto";
+    btn.style.bottom = "20px";
+    btn.style.left = "50%";
+    btn.style.right = "auto";
+    btn.style.transform = "translateX(-50%)";
+  }
 };
 
 function resizeCanvas() {
@@ -290,36 +320,34 @@ function startConfetti() {
 
   animate();
 }
-function blowCandle(event) {
-  event.stopPropagation();
 
-  const candle = event.currentTarget;
-  candle.classList.add("blown");
-
-  startConfetti(); // biar langsung meriah
-
-  setTimeout(() => {
-    nextPage();
-  }, 900);
-}
-let musicStarted = false;
-
+/* ================= MUSIC ================= */
 function toggleMusic() {
   const music = document.getElementById("bgm");
   const btn = document.getElementById("music-btn");
   const icon = document.getElementById("music-icon");
 
   if (music.paused) {
-      music.volume = 0.5;
-      music.play();
-      icon.textContent = "⏸";
-      btn.classList.add("playing");
+    music.volume = 0.5;
+    music.play();
+    icon.textContent = "⏸";
+    btn.classList.add("playing");
+
+    // 🔥 pindah ke kanan atas (PAKSA)
+    btn.style.top = "20px";
+    btn.style.right = "20px";
+    btn.style.left = "auto";
+    btn.style.bottom = "auto";
+    btn.style.transform = "none";
+
   } else {
-      music.pause();
-      icon.textContent = "▶";
-      btn.classList.remove("playing");
+    music.pause();
+    icon.textContent = "▶";
+    btn.classList.remove("playing");
   }
 }
+
+/* ================= VIDEO SYNC ================= */
 document.addEventListener("DOMContentLoaded", () => {
   const video = document.querySelector("video");
   const music = document.getElementById("bgm");
@@ -328,24 +356,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!video || !music) return;
 
-  // 🎥 saat video play → pause musik
-  video.addEventListener("play", () => {
-      music.pause();
-      icon.textContent = "▶";
-      btn.classList.remove("playing");
+  video.addEventListener("play", async () => {
+    await fadeOutMusic(music, 800);
+    icon.textContent = "▶";
+    btn.classList.remove("playing");
   });
 
-  // 🎥 saat video pause → lanjut musik
   video.addEventListener("pause", () => {
-      music.play().catch(()=>{});
-      icon.textContent = "⏸";
-      btn.classList.add("playing");
+    music.play().catch(()=>{});
+    icon.textContent = "⏸";
+    btn.classList.add("playing");
   });
 
-  // 🎥 saat video selesai → lanjut musik
   video.addEventListener("ended", () => {
-      music.play().catch(()=>{});
-      icon.textContent = "⏸";
-      btn.classList.add("playing");
+    music.play().catch(()=>{});
+    icon.textContent = "⏸";
+    btn.classList.add("playing");
   });
 });
