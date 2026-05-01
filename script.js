@@ -133,7 +133,9 @@ gisel baik baik teruuss yaaa…
 dan kalau semuanya udah terasa lebih baik,
 mungkin kita bisa banyak menghabiskan banyak waktu bareng lagi dan melalui banyak hal yang menyenangkan lagii.
 tapi kalaupun tidak bisa,
-semoga gisel tetap baik baik saja di jalan yang gisel pilih nantinya, walaupun pasti berat buat raffa tapi raffa akan tetap menghargai itu.
+semoga gisel tetap baik baik saja nantinyaa, dan kalaupun itu yang terjadi... raffa harap semoga
+gisel ngga cuma inget raffa karena pernah bikin gisel kecewaa yaaa semoga sekecil apapunn hal baik yang raffa kasih juga bisa gisel ingat,
+walaupun pasti berat buat raffa tapi raffa akan tetap menghargai itu.
 karena pada akhirnya,
 hal yang paling penting adalah gisel bahagia.
 itu aja dari raffa kaya e kepanjangan yaa hehee.. dan mau gimanapun nantinya gisel tetep selalu jadi orang yang spesial buat raffa💖`;
