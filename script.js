@@ -88,11 +88,12 @@ sekarang gabisa bilang raffa tua lagii dongg kan gisel juga umurnya bertambahh h
 sebenarnya banyak banget hal yang pengen raffa sampaikan tapi mungkin dilain waktu saja.
 jujuur dari awal sampai sekarang, raffa ngerasa sangat beruntung
 bisa kenal gisel, banyak melalui hari hari yang menyenangkan sama gisel mulai dari mabar ml awalnya gisel minta ditemenin buat event dm kuning, gisel ingat tidaaa?? terus kita bikin beberapa trend juga sampai kita samaan nick dan pp,
-terus roblox kita pertama main mendaki itu kan tapi masih belum bisa on mic jadi akhirnya jalannya berhenti berhenti karena ngetik wkwkw terus besokannya akhirnya pake dc dehh,
+habis itu roblox kita pertama main mendaki itu kan tapi masih belum bisa on mic jadi akhirnya jalannya berhenti berhenti karena ngetik wkwkw akhirnya besokannya pake dc dehh,
 terus mancingg raffa nyariin gisel ikan ikan yang lucu lucuu ngasih gisel secret juga walaupun talon kikirnya minta ampunnn, main vd jugaa raffa nub banget sii disitu tapi ada gisel yang nge gendong jadi banyak menangnya jugaa, banyak
 juga anime yang sudah kita tonton dan film film horror yang sampai sekarang gaberani raffa lanjutin sendiri
 sampai main ke tempat tempat yang baru pertama raffa datengin sama gisel, untung aja raffa waktu itu mengiyakan ajakan gisel
-buat mabar karena dari situ semuanya berawal dan rasanya menyenangkan sekali, sebelumnya juga raffa ngga sama sekali nyangka bisa melwati itu semua sama gisel
+buat mabar karena dari situ semuanya berawal, kalau diliat lagi memang dah banyak yaaa yang kita lewatin bareng dan rasanya menyenangkan sekali, 
+sebelumnya juga raffa ngga sama sekali nyangka bisa melwati itu semua sama gisel,
 raffa kira setelahh event dm kuningnya selesai waktu itu yaaa raffa bakal sendirii lagi ehh ternyataa kitaa bisa bareng terus dari situ.
 walaupun mungkin sekarang terasa sedikit berbeda.
 gisel mungkin ngga sadar, tapi kehadiran gisel itu
