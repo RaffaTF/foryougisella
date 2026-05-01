@@ -26,6 +26,7 @@ function show(id) {
 
   page = id;
 
+
   /* PAGE 7 TEXT (TIDAK DIUBAH) */
   if (id === "p7") {
     const el = document.getElementById("typewriter-text");
@@ -156,6 +157,19 @@ function blowCandle(event) {
 /* ================= RESTART (FULL RESET) ================= */
 function restartDiary(event) {
   event.stopPropagation();
+
+  // 🔥 STOP MUSIK TOTAL
+  const music = document.getElementById("bgm");
+  const btn = document.getElementById("music-btn");
+  const icon = document.getElementById("music-icon");
+
+  if (music) {
+    music.pause();
+    music.currentTime = 0;
+  }
+
+  if (btn) btn.classList.remove("playing");
+  if (icon) icon.textContent = "▶";
 
   // reset video
   stopAllVideos();
@@ -288,3 +302,50 @@ function blowCandle(event) {
     nextPage();
   }, 900);
 }
+let musicStarted = false;
+
+function toggleMusic() {
+  const music = document.getElementById("bgm");
+  const btn = document.getElementById("music-btn");
+  const icon = document.getElementById("music-icon");
+
+  if (music.paused) {
+      music.volume = 0.5;
+      music.play();
+      icon.textContent = "⏸";
+      btn.classList.add("playing");
+  } else {
+      music.pause();
+      icon.textContent = "▶";
+      btn.classList.remove("playing");
+  }
+}
+document.addEventListener("DOMContentLoaded", () => {
+  const video = document.querySelector("video");
+  const music = document.getElementById("bgm");
+  const btn = document.getElementById("music-btn");
+  const icon = document.getElementById("music-icon");
+
+  if (!video || !music) return;
+
+  // 🎥 saat video play → pause musik
+  video.addEventListener("play", () => {
+      music.pause();
+      icon.textContent = "▶";
+      btn.classList.remove("playing");
+  });
+
+  // 🎥 saat video pause → lanjut musik
+  video.addEventListener("pause", () => {
+      music.play().catch(()=>{});
+      icon.textContent = "⏸";
+      btn.classList.add("playing");
+  });
+
+  // 🎥 saat video selesai → lanjut musik
+  video.addEventListener("ended", () => {
+      music.play().catch(()=>{});
+      icon.textContent = "⏸";
+      btn.classList.add("playing");
+  });
+});
