@@ -325,15 +325,20 @@ function startConfetti() {
 function toggleMusic() {
   const music = document.getElementById("bgm");
   const btn = document.getElementById("music-btn");
-  const icon = document.getElementById("music-icon");
+
+  const playIcon = document.getElementById("icon-play");
+  const pauseIcon = document.getElementById("icon-pause");
 
   if (music.paused) {
     music.volume = 0.5;
     music.play();
-    icon.textContent = "⏸";
+
     btn.classList.add("playing");
 
-    // 🔥 pindah ke kanan atas (PAKSA)
+    playIcon.style.display = "none";
+    pauseIcon.style.display = "block";
+
+    // posisi kanan atas
     btn.style.top = "20px";
     btn.style.right = "20px";
     btn.style.left = "auto";
@@ -342,11 +347,13 @@ function toggleMusic() {
 
   } else {
     music.pause();
-    icon.textContent = "▶";
+
     btn.classList.remove("playing");
+
+    playIcon.style.display = "block";
+    pauseIcon.style.display = "none";
   }
 }
-
 /* ================= VIDEO SYNC ================= */
 document.addEventListener("DOMContentLoaded", () => {
   const video = document.querySelector("video");
