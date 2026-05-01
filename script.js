@@ -88,7 +88,8 @@ sekarang gabisa bilang raffa tua lagii dongg kan gisel juga umurnya bertambahh h
  mungkin ini jadi bagian terakhir dari semua yang raffa buat disini.
 sebenarnya banyak banget hal yang pengen raffa sampaikan tapi mungkin dilain waktu saja.
 jujuur dari awal sampai sekarang, raffa ngerasa sangat beruntung
-bisa kenal gisel, banyak melalui hari hari yang menyenangkan sama gisel mulai dari mabar ml dan roblox terus banyak
+bisa kenal gisel, banyak melalui hari hari yang menyenangkan sama gisel mulai dari mabar ml terus roblox kita mendaki waktu ituu terus mancingg juga raffa nyariin 
+gisel ikan ikan yang lucu lucuu, main vd jugaa walaupun raffa nub banget disitu tapi ada gisel yang nge gendong jadi banyak menangnya jugaa, banyak
 juga anime yang sudah kita tonton dan film film horror yang sampai sekarang gaberani raffa lanjutin sendiri
 sampai main ke tempat tempat yang baru pertama raffa datengin sama gisel, untung aja raffa waktu itu mengiyakan ajakan gisel
 buat mabar karena dari situ semuanya berawal.
@@ -102,7 +103,7 @@ cerita cerita gisel, cara gisel respon sesuatu,
 bahkan hal hal random yang gisel kasih tau ke raffa semuanya sangat berarti.
 dan raffa juga sadar, mungkin sekarang semuanya udah ngga sehangat dulu,
 mungkin masih ada jarak, ada hal hal yang berubah,
-dan mungkin juga masih ada rasa kecewa yang belum sepenuhnya pulih.
+dan mungkin juga masih ada rasa kecewa yang belum sepenuhnya hilang.
 tapi gapapaa raffa paham...
 raffa juga ngga mau maksa apapun,
 ngga mau bikin gisel ngerasa harus balik seperti dulu, atau ngerespon dengan cara tertentu.
