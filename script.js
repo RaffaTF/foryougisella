@@ -159,7 +159,9 @@ semoga gisel tetap baik baik saja nantinyaa,
 walaupun jujurr pasti ngga mudah buat raffa tapi raffa akan tetap menghargai itu.
 karena pada akhirnya,
 hal yang paling penting adalah gisel bahagia.
-itu aja dari raffa kaya e kepanjangan yaa hehee.. dan mau gimanapun nantinya gisel tetep selalu jadi orang yang spesial buat raffa💖`;
+itu aja dari raffa kaya e kepanjangan yaa hehee.. dan mau gimanapun nantinya gisel tetep selalu jadi orang yang spesial buat raffa💖.
+
+kalau web ini masih kurang bagus atau banyak erornya mohon dimaklumin yaaaa raffa buatnya dari yang raffa inget pas sekolaahh 😁😁 `;
 
 /* ================= CANDLE ================= */
 function blowCandle(event) {
