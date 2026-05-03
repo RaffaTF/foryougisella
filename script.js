@@ -104,9 +104,9 @@ function nextPage() {
 }
 
 /* ================= FINAL MESSAGE (ASLI) ================= */
-const finalMessage = `halooo gisell, gisel gimanaa kabarnyaa??? baikk kannn... wihh ada yang ulang tahun niihh
+const finalMessage = `halooo gisell, gisel gimanaa kabarnyaa??? baikk kannn... wihh ada yang ulang tahun niihh,
 sekarang gabisa bilang raffa tua lagii dongg kan gisel juga umurnya bertambahh heheee :) hmmm
- mungkin ini jadi bagian terakhir dari semua yang raffa buat disini.
+mungkin ini jadi bagian terakhir dari semua yang raffa buat disini.
 sebenarnya banyak banget hal yang pengen raffa sampaikan tapi mungkin dilain waktu saja.
 jujuur dari awal sampai sekarang, raffa ngerasa sangat beruntung
 bisa kenal gisel, banyak melalui hari hari yang menyenangkan sama gisel mulai dari mabar ml awalnya gisel minta ditemenin buat event dm kuning, gisel ingat tidaaa?? terus kita bikin beberapa trend juga sampai kita samaan nick dan pp,
@@ -144,19 +144,19 @@ gisel kayanya sudah lebih happy sekarang.
 dan apapun itu nantinya,
 raffa tetap bersyukur pernah punya cerita sama gisel, semua momen yang itu ngga akan pernah jadi hal yang sia sia.
 jadi untuk sekarang,
-raffa cuma mau bilang terima kasih... terimakasih untuk setiap momen, setiap cerita, dan setiap hal hal kecil yang kita lewatin, i will never forget that.
+raffa cuma mau bilang terima kasih... terimakasih untuk setiap momen, setiap cerita, dan setiap hal hal kecil yang kita lewatin, raffa nggaa akan lupaaa.
 dan di hari spesial gisel ini,
 raffa cuma berharap satu hal sederhana…
 semoga gisel benar benar bahagia.
 bukan cuma hari ini,
 tapi juga di hari hari setelah ini.
-once again, happy birthday yaa gisel 🎂✨
+sekalii lagiii, happy birthday yaa gisel 🎂✨
 gisel baik baik teruuss yaaa…
 dan kalau semuanya udah terasa lebih baik,
 mungkin kita bisa banyak menghabiskan banyak waktu bareng lagi dan melalui banyak hal yang menyenangkan lagii.
-tapi kalaupun tidak bisa,
-semoga gisel tetap baik baik saja nantinyaa,
-walaupun pasti berat buat raffa tapi raffa akan tetap menghargai itu.
+tapi kalaupun memang tidak bisa,
+semoga gisel tetap baik baik saja nantinyaa, 
+walaupun jujurr pasti ngga mudah buat raffa tapi raffa akan tetap menghargai itu.
 karena pada akhirnya,
 hal yang paling penting adalah gisel bahagia.
 itu aja dari raffa kaya e kepanjangan yaa hehee.. dan mau gimanapun nantinya gisel tetep selalu jadi orang yang spesial buat raffa💖`;
